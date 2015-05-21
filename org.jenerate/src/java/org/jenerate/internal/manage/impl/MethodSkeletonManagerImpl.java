@@ -30,9 +30,9 @@ public final class MethodSkeletonManagerImpl implements MethodSkeletonManager {
      */
     public MethodSkeletonManagerImpl(PreferencesManager preferencesManager,
             JavaInterfaceCodeAppender javaInterfaceCodeAppender) {
-        methodSkeletons.add(new HashCodeMethodSkeleton(preferencesManager));
-        methodSkeletons.add(new EqualsMethodSkeleton(preferencesManager));
-        methodSkeletons.add(new ToStringMethodSkeleton(preferencesManager));
+    	methodSkeletons.add(new ToStringMethodSkeleton(preferencesManager));
+    	methodSkeletons.add(new EqualsMethodSkeleton(preferencesManager));
+    	methodSkeletons.add(new HashCodeMethodSkeleton(preferencesManager));        
         methodSkeletons.add(new CompareToMethodSkeleton(preferencesManager, javaInterfaceCodeAppender));
     }
 

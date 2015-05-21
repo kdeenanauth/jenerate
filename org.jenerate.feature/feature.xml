@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.jenerate.feature"
-      label="Jenerate"
+      label="Jenerate-Rosetta"
       version="1.0.0"
       provider-name="Maxime Audrain">
 

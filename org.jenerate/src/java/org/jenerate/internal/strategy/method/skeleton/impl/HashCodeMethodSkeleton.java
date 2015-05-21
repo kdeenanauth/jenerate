@@ -50,7 +50,8 @@ public class HashCodeMethodSkeleton extends AbstractMethodSkeleton<EqualsHashCod
         StringBuffer content = new StringBuffer();
         if (data.generateComment()) {
             content.append("/**\n");
-            content.append(" * {@inheritDoc}\n");
+            content.append(" * {@inheritDoc}\n *\n");
+            content.append(" * @see java.lang.Object#hashCode()\n");
             content.append(" */\n");
         }
         if (addOverride) {

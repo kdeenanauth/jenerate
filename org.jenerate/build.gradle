@@ -2,10 +2,10 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 repositories { 
-		mavenCentral() 
+		mavenCentral()
 }
 
-dependencies { 
+dependencies {
 		testCompile "junit:junit:+" 
 		testCompile "org.mockito:mockito-core:+" 
 		testCompile "org.objenesis:objenesis:+"

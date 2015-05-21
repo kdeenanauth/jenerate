@@ -9,6 +9,10 @@ import org.jenerate.internal.manage.MethodContentManager;
 import org.jenerate.internal.manage.PreferencesManager;
 import org.jenerate.internal.strategy.method.Method;
 import org.jenerate.internal.strategy.method.content.MethodContent;
+import org.jenerate.internal.strategy.method.content.impl.altguava.AltGuavaCompareToMethodContent;
+import org.jenerate.internal.strategy.method.content.impl.altguava.AltGuavaEqualsMethodContent;
+import org.jenerate.internal.strategy.method.content.impl.altguava.AltGuavaHashCodeMethodContent;
+import org.jenerate.internal.strategy.method.content.impl.altguava.AltGuavaToStringMethodContent;
 import org.jenerate.internal.strategy.method.content.impl.commonslang.CommonsLangCompareToMethodContent;
 import org.jenerate.internal.strategy.method.content.impl.commonslang.CommonsLangEqualsMethodContent;
 import org.jenerate.internal.strategy.method.content.impl.commonslang.CommonsLangHashCodeMethodContent;
@@ -62,6 +66,11 @@ public final class MethodContentManagerImpl implements MethodContentManager {
         methodContents.add(new GuavaEqualsMethodContent(preferencesManager));
         methodContents.add(new GuavaHashCodeMethodContent(preferencesManager));
         methodContents.add(new GuavaCompareToMethodContent(preferencesManager, javaInterfaceCodeAppender));
+        
+        methodContents.add(new AltGuavaToStringMethodContent(preferencesManager));
+        methodContents.add(new AltGuavaHashCodeMethodContent(preferencesManager));
+        methodContents.add(new AltGuavaEqualsMethodContent(preferencesManager));
+        methodContents.add(new AltGuavaCompareToMethodContent(preferencesManager, javaInterfaceCodeAppender));
     }
 
     /**

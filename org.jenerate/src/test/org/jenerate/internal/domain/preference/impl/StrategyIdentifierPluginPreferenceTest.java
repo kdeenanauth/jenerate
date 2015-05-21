@@ -29,7 +29,9 @@ public class StrategyIdentifierPluginPreferenceTest extends AbstractPluginPrefer
                     MethodContentStrategyIdentifier.USE_COMMONS_LANG.getName() },
             { MethodContentStrategyIdentifier.USE_COMMONS_LANG3.getName(),
                     MethodContentStrategyIdentifier.USE_COMMONS_LANG3.getName() },
-            { MethodContentStrategyIdentifier.USE_GUAVA.getName(), MethodContentStrategyIdentifier.USE_GUAVA.getName() } };
+            { MethodContentStrategyIdentifier.USE_GUAVA.getName(), MethodContentStrategyIdentifier.USE_GUAVA.getName() },
+            { MethodContentStrategyIdentifier.USE_ALTGUAVA.getName(), MethodContentStrategyIdentifier.USE_ALTGUAVA.getName() }
+    };
 
     @Test
     public void testGetCurrentPreferenceValue() {

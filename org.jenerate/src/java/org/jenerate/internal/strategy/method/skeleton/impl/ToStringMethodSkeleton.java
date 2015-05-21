@@ -49,8 +49,9 @@ public class ToStringMethodSkeleton extends AbstractMethodSkeleton<ToStringGener
 
         StringBuffer content = new StringBuffer();
         if (data.generateComment()) {
-            content.append("/**\n");
-            content.append(" * {@inheritDoc}\n");
+            content.append("\n/**\n");
+            content.append(" * {@inheritDoc}\n *\n");
+            content.append(" * @see java.lang.Object#toString()\n");
             content.append(" */\n");
         }
         if (addOverride) {
